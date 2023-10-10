@@ -1,0 +1,63 @@
+
+const addRetailer = async (req, res) => {
+    try {
+    // const data = [
+    // req.body.retailer_id,
+    // req.body.shop_name,
+    // req.body.password,
+    // req.body.owner_name,
+    // req.body.registration_no,
+    // req.files.registration_document[0].location,
+    // req.files.profile_photo[0].location,
+    // req.body.gst_no,
+    // req.body.pan_no,
+    // req.body.address,
+    // req.body.state,
+    // req.body.city,
+    // req.body.pincode,
+    // req.body.contact_no,
+    // req.body.email,
+   
+    // ];
+
+const salt = await bcrypt.genSalt(20);
+const hashedPassword = await bcryt.hash(req.body.password, salt);
+
+console.log(hashedPassword)
+
+const userData = {
+    retailer_id: uuid(),
+    password: hashedPassword,
+    shop_name: req.body.shop_name,
+    owner_name: req.body.owner_name,
+    registration_no: req.body.registration_no,
+    registration_document: req.files.registration_document[0].location,
+    profile_photo: req.files.profile_photo[0].location,
+    gst_no: req.body.gst_no,
+    pan_no: req.body.pan_no,
+    address: req.body.address,
+    state: req.body.state,
+    city: req.body.city,
+    pincode: req.body.pincode,
+    contact_no: req.body.contact_no,
+    email: req.body.email,
+}
+
+console.log("useradata",userData)
+
+    const sqlQuery =
+    "INSERT INTO retailer_registration( retailer_id, shop_name, password, owner_name, registration_no, registration_document, profile_photo, gst_no, pan_no, address, state, city, pincode, contact_no, email) values( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    console.log(sqlQuery)
+    await connection.query(sqlQuery, [userData], (error, result) => {
+    console.log(result, "result");
+    console.log(data)
+    if (error) {
+    res.send({ status: 400, Error: error.sqlMessage });
+    } else {
+    res.send({ status: 200, response: result });
+    }
+    });
+    } catch (error) {
+    res.send({ Error: error.sqlMessage });
+    }
+    };

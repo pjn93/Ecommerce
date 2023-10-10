@@ -1,0 +1,319 @@
+  <div
+        className="container"
+        style={{
+          height: "550px",
+          paddingTop: "10px",
+          marginTop: "30px",
+          width: "100%",
+        }}
+      >
+        <Form
+          style={{ marginTop: "10px", height: "560px" }}
+        >
+          <div className="row">
+           
+          <div className="column">
+              <label style={{ fontSize: "16px" }} htmlFor="retailer_id">
+                {" "}
+                Retailer Id{" "}
+              </label>
+              <input
+                style={{ height: "35px" }}
+                type="text"
+                id="retailer_id"
+                name="retailer_id"
+                value={newretailer_id}
+                onChange={(e) => setNewretailer_id(e.target.value)}
+                autoComplete="off"
+              />
+            
+            </div>
+            <div className="column">
+              <label style={{ fontSize: "16px" }} htmlFor="shop_name">
+                {" "}
+                Shop Name{" "}
+              </label>
+              <input
+                style={{ height: "35px" }}
+                type="text"
+                id="shop_name"
+                name="shop_name"
+                value={newshop_name}
+                onChange={(e) => setNewshop_name(e.target.value)}
+                autoComplete="off"
+              />
+             
+            </div>
+
+            <div className="column">
+              <label style={{ fontSize: "16px" }} htmlFor="password">
+                {" "}
+                Password{" "}
+              </label>
+              <input
+                style={{ height: "35px" }}
+                type="password"
+               id="password"
+                name="password"
+                value={newpassword}
+                onChange={(e) => setNewpassword(e.target.value)}
+                autoComplete="off"
+              />
+     
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="column">
+              <label style={{ fontSize: "16px" }} htmlFor="owner_name">
+                {" "}
+                Owner Name <span style={{ color: "white" }}>*</span>{" "}
+              </label>
+              <br />{" "}
+              <input
+                style={{ height: "35px" }}
+                type="text"
+                id="owner_name"
+                name="owner_name"
+                value={newowner_name}
+                onChange={(e) => setNewowner_name(e.target.value)}
+                autoComplete="off"
+              />
+            </div>
+            <div className="column">
+              <label style={{ fontSize: "16px" }} htmlFor="registration_no">
+                {" "}
+                Registration No{" "}
+              </label>
+              <br />{" "}
+              <input
+                style={{ height: "35px" }}
+                type="number"
+                id="registration_no"
+                name="registration_no"
+                value={newregistration_no}
+                onChange={(e) => setNewregistration_no(e.target.value)}
+                autoComplete="off"
+              />
+            </div>
+
+            <div className="column">
+              <label
+                style={{ fontSize: "16px" }}
+                htmlFor="registration_document"
+              >
+  
+                Registration Document
+              </label>
+              <br />
+              <input
+                style={{ height: "35px" }}
+                type="file"
+                id="registration_document"
+                name="registration_document"
+                onChange={handleImage}
+              />
+            </div>
+          </div>
+
+          <div className="row">
+           
+            <div className="column">
+            <label
+                style={{ fontSize: "16px" }}
+                htmlFor="profile_photo"
+              >
+  
+                Profile Photo
+              </label>
+              <br />
+              <input
+                style={{ height: "35px" }}
+                type="file"
+                id="profile_photo"
+                name="profile_photo"
+                onChange={handleImage}
+              />
+              
+            </div>
+            <div className="column">
+              <label style={{ fontSize: "16px" }} htmlFor="gst_no">
+                {" "}
+                GST No{" "}
+              </label>
+              <input
+                style={{ height: "35px" }}
+                type="number"
+                id="gst_no"
+                name="gst_no"
+                value={newgst_no}
+                onChange={(e) => setNewgst_no(e.target.value)}
+                autoComplete="off"
+              />
+              {/* {errors.name && touched.name ? (<p className="form-error">{errors.name}</p>) : null} */}
+            </div>
+            <div className="column">
+              <label style={{ fontSize: "16px" }} htmlFor="pan_no">
+                {" "}
+                PAN No{" "}
+              </label>
+              <input
+                style={{ height: "35px" }}
+                type="text"
+                id="pan_no"
+                name="pan_no"
+                value={newpan_no}
+                onChange={(e) => setNewpan_no(e.target.value)}
+                autoComplete="off"
+              />
+            </div>
+          </div>
+
+         
+          <div className="row">
+          <div className="column">
+              <label style={{ fontSize: "16px" }} htmlFor="address">
+                {" "}
+                Address{" "}
+              </label>
+              <input
+                style={{ height: "35px" }}
+                type="text"
+                id="address"
+                name="address"
+                value={newaddress}
+                onChange={(e) => setNewaddress(e.target.value)}
+                autoComplete="off"
+              />
+             
+            </div>
+            <div className="column">
+              <label style={{ fontSize: "16px" }} htmlFor="state">
+                {" "}
+                State{" "}
+              </label>
+              <input
+                style={{ height: "35px" }}
+                type="text"
+                id="state"
+                name="state"
+                value={newstate}
+                onChange={(e) => setNewstate(e.target.value)}
+                autoComplete="off"
+              />
+            </div>
+
+            <div className="column">
+            <label style={{ fontSize: "16px" }} htmlFor="city">
+                {" "}
+                City{" "}
+              </label>
+              <input
+                style={{ height: "35px" }}
+                type="number"
+                placeholder="990348682"
+                id="city"
+                name="city"
+                value={newcity}
+                onChange={(e) => setNewcity(e.target.value)}
+                autoComplete="off"
+              />
+            </div>
+           
+          </div>
+
+          <div className="row">
+          <div className="column">
+          <label style={{ fontSize: "16px" }} htmlFor="pincode">
+                {" "}
+                PinCode{" "}
+              </label>
+              <input
+                style={{ height: "35px" }}
+                type="number"
+                id="pincode"
+                name="pincode"
+                value={newpincode}
+                onChange={(e) => setNewpincode(e.target.value)}
+                autoComplete="off"
+            />
+            </div>
+            <div className="column">
+            <label style={{ fontSize: "16px" }} htmlFor="contact_no">
+                {" "}
+                Contact No{" "}
+              </label>
+              <input
+                style={{ height: "35px" }}
+                type="text"
+                id="contact_no"
+                name="contact_no"
+                value={newcontact_no}
+                onChange={(e) => setNewcontact_no(e.target.value)}
+                autoComplete="off"
+              />
+             
+            </div>
+
+            <div className="column">
+              <label style={{ fontSize: "16px" }} htmlFor="email">
+                {" "}
+                Email{" "}
+              </label>
+              <input
+                style={{
+                  backgroundColor: "#fff",
+                  color: "black",
+                  height: "35px",
+                  paddingTop: "3px",
+                }}
+                type="email"
+                id="email"
+                name="email"
+                defaultValue={newemail}
+                onChange={(e) => setNewemail(e.target.value)}
+                autoComplete="off"
+              />
+            </div>
+          </div>
+
+
+          <div className="row">
+          <div className="column">
+          <label style={{ fontSize: "16px" }} htmlFor="registration">
+                {" "}
+                Registration Date{" "}
+              </label>
+              <input
+                style={{ height: "35px" }}
+                type="text"
+                id="registration"
+                name="registration"
+                value={newregistration}
+                onChange={(e) => setNewregistration(e.target.value)}
+                autoComplete="off"
+            />
+            </div>
+            <div className="column">
+            <label style={{ fontSize: "16px" }} htmlFor="status">
+                {" "}
+                Status{" "}
+              </label>
+              <input
+                style={{ height: "35px" }}
+                type="text"
+                id="status"
+                name="status"
+                value={newstatus}
+                onChange={(e) => setNewstatus(e.target.value)}
+                autoComplete="off"
+              />
+             
+            </div>
+          </div>
+
+
+          <p>{res}</p>
+        
+        </Form>
+      </div>
